@@ -28,5 +28,13 @@ class TestContact(unittest.TestCase):
         test_contact.save_contact()
         self.assertEqual(len(Contact.contact_list),2)
 
+    def test_delete_contact(self):
+        self.new_contact.save_contact()
+        test_contact = Contact("Test","user","0712345678","test@user.com")#new contact
+
+        test_contact.save_contact()
+        self.new_contact.delete_contact()#Deleting a contact object
+        self.assertEqual(len(Contact.contact_list),1)
+
 if __name__ == '__main__':
     unittest.main()
