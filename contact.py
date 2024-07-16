@@ -14,3 +14,12 @@ class Contact:
 
     def delete_contact(self):
         Contact.contact_list.remove(self)
+
+    @classmethod
+    def find_by_number(cls,number):
+        """
+        method that takes in a number and returns a contact that matches that number
+        """
+        for contact in cls.contact_list:
+            if contact.phone_number == number:
+                return number
