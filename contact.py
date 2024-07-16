@@ -11,3 +11,6 @@ class Contact:
 
     def save_contact(self):
         Contact.contact_list.append(self)
+
+    def delete_contact(self):
+        Contact.contact_list.remove(self)
