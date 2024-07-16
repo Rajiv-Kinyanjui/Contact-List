@@ -22,4 +22,4 @@ class Contact:
         """
         for contact in cls.contact_list:
             if contact.phone_number == number:
-                return number
+                return contact
