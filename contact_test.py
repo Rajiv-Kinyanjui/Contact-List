@@ -11,15 +11,15 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_contact.phone_number,"0712345678")
         self.assertEqual(self.new_contact.email,"james@gmail.com")
 
-    def test_save_contact(self):
-        self.new_contact.save_contact() #saving the new contact
-        self.assertEqual(len(Contact.contact_list),1)
-
     def tearDown(self):
         """
         tearDown method that does clean up after each test case has run.
         """
         Contact.contact_list = []
+
+    def test_save_contact(self):
+        self.new_contact.save_contact() #saving the new contact
+        self.assertEqual(len(Contact.contact_list),1)
 
     def test_save_multiple_contact(self):
         self.new_contact.save_contact()
