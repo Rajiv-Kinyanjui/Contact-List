@@ -33,3 +33,7 @@ class Contact:
             if contact.phone_number == number:
                 return True
         return False
+    
+    @classmethod
+    def display_contacts(cls):
+        return cls.contact_list
